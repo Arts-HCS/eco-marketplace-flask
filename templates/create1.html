@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/select.css">
+    <link rel="icon" href="static/image1.png">
+    <title>Crear producto | User</title>
+</head>
+<body>
+    <header>
+        <h2 class="subtitle">Elige el tipo de publicación</h2>
+    </header>
+    <form action="{{ url_for('create1') }}" method="POST">
+        <div class="container-items">
+            <div class="item">
+                <input type="radio" id="gratuita" name="product-type" value="Gratuita">
+                <label for="gratuita" class="info-product">
+                    <h2 class="title-item">Gratuita</h2>
+                    <ul>
+                        <li>Exposición baja</li>
+                        <li>Duración de dos meses</li>
+                    </ul>
+                    <p class="price otwo">$0.00</p>
+                    <p class="note">Cargo por venta</p>
+                </label>
+            </div>
+            <div class="item">
+                <input type="radio" id="clasica" name="product-type" value="Clásica">
+                <label for="clasica" class="info-product">
+                    <h2 class="title-item">Clásica</h2>
+                    <ul>
+                        <li>Exposición alta</li>
+                        <li>Duración ilimitada</li>
+                    </ul>
+                    <p class="price otwo">$75.00</p>
+                    <p class="note">Cargo por venta</p>
+                </label>
+            </div>
+            <div class="item">
+                <input type="radio" id="premium" name="product-type" value="Premium">
+                <label for="premium" class="info-product">
+                    <h2 class="title-item">Premium</h2>
+                    <ul>
+                        <li>Máxima exposición</li>
+                        <li>Duración ilimitada</li>
+                        <li>Ofrece meses sin intereses</li>
+                    </ul>
+                    <p class="price">$105.00</p>
+                    <p class="note">Cargo por venta</p>
+                </label>
+            </div>
+        </div>
+
+        <h3 class="message">Ten en cuenta que los cargos incluyen IVA</h3>
+
+    </form>
+    <footer>
+        <a class="ret-link" href="/menu">Cancelar</a>
+        <a href="/create2">
+            <button class="confirm-button">Confirmar</button>
+        </a>
+    </footer>
+</body>
+</html>

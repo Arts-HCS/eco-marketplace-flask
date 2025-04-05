@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markin</title>
+    <link rel="stylesheet" href="static/styles.css">
+    <link rel="icon" href="static/image1.png">
+</head>
+<body>
+    <div class="log-in-container">
+        <div class="log-in-form">
+            {% block content %}
+            <form action="{{ url_for('reg') }}" class="formulario-log" method="POST">
+                <h2 class="subtitle">Regístrate</h2>
+                <label>Nombre completo
+                    <input type="text" name="name" id="name" placeholder="Ingresa tu nombre completo" required>
+                </label>
+                <label>Correo electrónico
+                    <input type="email" name="email" id="email" placeholder="example@happy.face"required>
+                </label>
+                <label>Edad
+                    <input type="number" name="age" id="age" placeholder="Ingresa tu edad" required>
+                </label>
+                <label>Género
+                    <select id="gender" name="gender" required>
+                        <option value="">Seleccione su género</option>
+                        <option value="Male">Masculino</option>
+                        <option value="Female">Femenino</option>
+                        <option value="Other">Otro</option>
+                    </select>
+                </label>
+                <label for="password">Crea tu contraseña
+                    <input  type="password" name="password" id="password" placeholder="Introduce tu contraseña" required>
+                </label>
+                <label>Acepto <a href="/ter" >términos y condiciones</a>
+                    <input type="checkbox" required>
+                </label>          
+                <button class="form__button">Crear una cuenta</button>
+            </form>
+            {% endblock %}
+        </div>
+    </div>
+    
+</body>
+</html>

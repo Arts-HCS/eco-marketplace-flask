@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/compras.css">
+    <link rel="icon" href="static/image1.png">
+    <title>Saldo | User</title>
+</head>
+<body>
+    <header>
+        <h1 class="title-menu">Markin</h1>
+        <h2 class="subtitle">Tu saldo</h2>
+        <img class="profile-pic" src="https://cdn-icons-png.flaticon.com/512/1361/1361728.png" alt="Profile Picture">
+    </header>
+
+    <h1 class="money">$0</h1>
+    <h2 class="text">Pesos mexicanos</h2>
+
+    <h1 class="add">Agregar saldo</h1>
+    <div class="container-items">
+        <div class="item">
+            <input type="radio" id="primera" name="product-type" value="Gratuita">
+            <label for="primera" class="info-product">
+                <h2 class="op">Con tarjeta de regalo</h2>
+            </label>
+        </div>
+        <div class="item">
+            <input type="radio" id="segunda" name="product-type" value="Clásica">
+            <label for="segunda" class="info-product">
+                <h2 class="op sec">Con PayPal</h2>
+            </label>
+        </div>
+        <div class="item">
+            <input type="radio" id="tercera" name="product-type" value="Premium">
+            <label for="tercera" class="info-product">
+                <h2 class="op">Con tarjeta de crédito</h2>
+            </label>
+        </div>
+    </div>
+    
+    <footer>
+        <a class="ret-link" href="/menu">Cancelar</a>
+        <a href="/create2">
+            <button class="confirm-button">Confirmar</button>
+        </a>
+    </footer>
+    
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="static/styles3.css">
+    <link rel="icon" href="static/image1.png">
+</head>
+<body>
+  <div class="log-in-container">
+    <div class="log-in-form">
+      <h2 class="subtitle">Inicia sesión</h2>
+      {% block content %}
+      <form action="{{ url_for('login') }}" method="POST" class="login">
+        <label for="email">Correo electrónico
+          <input type="email" name="email" id="email" placeholder="Introduzca su e-mail" value="{{ email }}" required>
+        </label>
+        <label for="password">Introduzca su contraseña
+          <input type="password" name="password" id="password" placeholder="Introduzca su contraseña" value="{{ password }}" required>
+        </label>
+        
+        <p class="error">{{ error }}</p>
+        <button class="form__button">Iniciar sesión</button>
+        
+        <p class="signup">¿No tienes cuenta? 
+          <a href="/reg" class="form__button reg__link">Regístrate</a>
+        </p>
+    </form>
+      {% endblock %}
+    </div>
+</div>
+</body>
+</html>

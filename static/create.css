@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: #f0f0f0;
+    padding-top: 50px;
+    padding-bottom: 53px;
+}
+
+header{
+    text-align: center;
+    padding: 15px 30px;
+    background-color: #d6d6d6;
+    border-bottom: 1px solid #212930;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top:0;
+}
+
+.subtitle{
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.create-product-container{
+    background-color: white;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    padding: 20px 40px;
+    margin: 0px 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+
+.formulario-crear {
+    max-width: 400px;
+    width: 100%;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #2e4052;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="file"],
+select,
+textarea {
+    width: 100%;
+    padding: 11px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #ecf0f1;
+    font-size: 14px;
+    resize: none;
+}
+
+select{
+    color: #808080;
+}
+
+input[type="checkbox"]{
+    margin-bottom: 10px;
+}
+
+.price-input{
+    color: #808080;
+}
+
+input:hover,
+select:hover,
+textarea:hover {
+    border: 1px solid #2e4052;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form__button {
+    width: 100%;
+    padding: 12px;
+    background-color: #598eb6;
+    color: white;
+    font-size: ß16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form__button:hover {
+    background-color: #436986;
+}
+
+

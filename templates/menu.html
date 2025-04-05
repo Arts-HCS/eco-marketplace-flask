@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>Tienda</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='styles4.css') }}">
+        <link rel="icon" href="static/image1.png">
+	</head>
+	<body>
+		<header>
+            <h1 class="title-menu">Markin</h1>
+            <input class="searcher" type="text" placeholder="Buscar productos, negocios y más...">
+            <button class="btn-searcher">Buscar</button>
+			<a href="/create1" class="form__button reg__link"><button class="btn-create">Crear producto</button></a>
+            <a href="/profile" class="form__button reg__link"><img class="profile-pic" src="https://cdn-icons-png.flaticon.com/512/1361/1361728.png" alt="img6"></a>
+        </header>
+		
+		{% block content %}
+    		{% if products %}
+    		    <h1 class="main__title">Mis productos</h1>
+    		    <div class="container-items">
+    		        {% for product in products %}
+    		            <div class="item">
+    		                {% if product.image %}
+    		                    <figure>
+    		                        <img class="img-ct" src="{{ url_for('static', filename='images/' + product.image) }}" alt="img">
+    		                    </figure>
+    		                {% endif %}
+    		                <div class="info-product">
+    		                    <h2>{{ product.name }}</h2>
+    		                    <p class="price">{{ product.price }}</p>
+    		                </div>
+    		            </div>
+    		        {% endfor %}
+    		    </div>
+    		{% endif %}
+		{% endblock %}
+
+
+		<h1 class="main__title">Productos de la gente</h1>
+		<div class="container-items">
+			<div class="item">
+				<figure>
+					<img class="img-ct "src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/1989_HK_Sheung_Wan_Bonham_Strand_VITA_Distilled_Water.jpg/1200px-1989_HK_Sheung_Wan_Bonham_Strand_VITA_Distilled_Water.jpg" alt="img1">
+				</figure>
+				<div class="info-product">
+					<h2>Botellas de plástico</h2>
+					<p class="price">$80</p>
+				</div>
+			</div>
+			<div class="item">
+				<figure>
+					<img class="img-ct" src="https://irp.cdn-website.com/5ed890ab/MOBILE/jpg/815.jpg" alt="img2">
+				</figure>
+				<div class="info-product">
+					<h2>Cajas de cartón</h2>
+					<p class="price">$20</p>
+				</div>
+			</div>
+			<div class="item">
+				<figure>
+					<img class="img-ct" src="https://http2.mlstatic.com/D_NQ_NP_927905-CBT76655860468_062024-O.webp" alt="img3">
+				</figure>
+				<div class="info-product">
+					<h2>Botellas de vidrio</h2>
+					<p class="price">$50</p>
+				</div>
+			</div>
+			<div class="item">
+				<figure>
+					<img class="img-ct" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsxLdKozll6MMJMAJA4RfMNHUzm3BoRB7HDA&s" alt="img4">
+				</figure>
+				<div class="info-product">
+					<h2>Hojas recliclables</h2>
+					<p class="price">$90</p>
+				</div>
+			</div>
+			<div class="item">
+				<figure>
+					<img class="img-ct" src="https://gpspromocionales.com.mx/data/images/products/1647457477-valladolid.jpeg" alt="img5">
+				</figure>
+				<div class="info-product">
+					<h2>Pack de 4 bolsas</h2>
+					<p class="price">$100</p>
+				</div>
+			</div>
+			<div class="item">
+				<figure>
+					<img class="img-ct" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8XBkIiaCyIF-OjpinIlMYJL55vmyJfPQsCA&s" alt="img5">
+				</figure>
+				<div class="info-product">
+					<h2>Botellas de alcohol recicladas</h2>
+					<p class="price">$100</p>
+				</div>
+			</div>
+			<div class="item">
+				<figure>
+					<img class="img-ct" src="https://i.ebayimg.com/images/g/usgAAOSwvCBik-jb/s-l640.jpg" alt="img5">
+				</figure>
+				<div class="info-product">
+					<h2>Tapas de botella</h2>
+					<p class="price">$30</p>
+				</div>
+			</div>
+			<div class="item">
+				<figure>
+					<img class="img-ct" src="https://i.etsystatic.com/13885409/r/il/886222/1334705600/il_fullxfull.1334705600_tv0s.jpg" alt="img5">
+				</figure>
+				<div class="info-product">
+					<h2>tapas de plástico</h2>
+					<p class="price">$50</p>
+				</div>
+			</div>
+			<div class="item">
+				<figure>
+					<img class="img-ct" src="https://i.ytimg.com/vi/QTSDhriq3WA/hqdefault.jpg" alt="img5">
+				</figure>
+				<div class="info-product">
+					<h2>Latas de aluminio</h2>
+					<p class="price">$80</p>
+				</div>
+			</div>
+			<div class="item">
+				<figure>
+					<img class="img-ct" src="https://http2.mlstatic.com/D_NQ_NP_983116-MLM75844684209_042024-O.webp" alt="img5">
+				</figure>
+				<div class="info-product">
+					<h2>Cajas para huevo</h2>
+					<p class="price">$80</p>
+				</div>
+			</div>
+			<div class="item">
+				<figure>
+					<img class="img-ct" src="https://s.alicdn.com/@sc04/kf/A8485f300073e4f51945a949ec631d25dG.jpg_300x300.jpg" alt="img5">
+				</figure>
+				<div class="info-product">
+					<h2>Periódico</h2>
+					<p class="price">$130</p>
+				</div>
+			</div>
+			<div class="item">
+				<figure>
+					<img class="img-ct" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOS5WqG1no_DWedOnnKDL5o-0JXPKE8QPcJA&s" alt="img5">
+				</figure>
+				<div class="info-product">
+					<h2>Tarjetas CPU</h2>
+					<p class="price">$180</p>
+				</div>
+			</div>
+			<div class="item">
+				<figure>
+					<img class="img-ct" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3Om2ouKhsDL3B7t9JoR3kbQFPir8V_8OxsR3KFmsWwjaKaJL0skMYsboA1l_n8m6Juco&usqp=CAU" alt="img5">
+				</figure>
+				<div class="info-product">
+					<h2>Cajas no armadas</h2>
+					<p class="price">$110</p>
+				</div>
+			</div>
+			<div class="item">
+				<figure>
+					<img class="img-ct" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFQ5CyHmdNHQaqWcQgbOTu44qAegskvk-aDQ&s" alt="img5">
+				</figure>
+				<div class="info-product">
+					<h2>Maderas 15x80</h2>
+					<p class="price">$110</p>
+				</div>
+			</div>
+			<div class="item">
+				<figure>
+					<img class="img-ct" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLd7h6DueeCOdQKgWh7iiZFEQwxTnh5HTLxw&s" alt="img5">
+				</figure>
+				<div class="info-product">
+					<h2>Colchones</h2>
+					<p class="price">$210</p>
+				</div>
+			</div>
+		</div>
+		<button class="btn-searcher last-button">Ver más</button>
+	</body>
+</html>
+
