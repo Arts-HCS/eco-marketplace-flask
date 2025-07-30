@@ -47,7 +47,7 @@
 
 1. **Clone this repo**
 ```bash
-git clone https://github.com/your-username/eco-marketplace-flask.git
+git clone https://github.com/Arts-HCS/eco-marketplace-flask.git
 cd eco-marketplace-flask
 ```
 
@@ -72,25 +72,32 @@ python main.py
 
 ## Models
 
-id          : int (primary key)
-login       : string
-password    : string
-name        : string
-age         : int
-gender      : string
-personal_id : string (unique)
+### User
 
-id          : int (primary key)
-name        : string
-category    : string
-price       : int
-currency    : string
-quantity    : int
-image       : string (file name)
-description : string
-personal_id : string (foreign key to user)
+| Field        | Type    | Description           |
+|--------------|---------|-----------------------|
+| id           | int     | Primary key           |
+| login        | string  |                       |
+| password     | string  |                       |
+| name         | string  |                       |
+| age          | int     |                       |
+| gender       | string  |                       |
+| personal_id  | string  | Unique                |
 
----
+### Product
+
+| Field        | Type    | Description                      |
+|--------------|---------|----------------------------------|
+| id           | int     | Primary key                      |
+| name         | string  |                                  |
+| category     | string  |                                  |
+| price        | int     |                                  |
+| currency     | string  |                                  |
+| quantity     | int     |                                  |
+| image        | string  | File name                        |
+| description  | string  |                                  |
+| personal_id  | string  | Foreign key to user (personal_id) |
+
 
 ## License
 
