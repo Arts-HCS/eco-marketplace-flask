@@ -5,7 +5,8 @@ import random
 import os
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///diary.db'
+basedir = os.path.abspath(os.path.dirname(__file__))
+app.config['SQLALCHEMY_DATABASE_URI'] = f"sqlite:///{os.path.join(basedir, 'instance', 'diary.db')}"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config["UPLOAD_FOLDER"]= "static/images/"
 
@@ -40,6 +41,9 @@ class Product(db.Model):
    description = db.Column(db.String(1000), nullable=False)
    personal_id = db.Column(db.String(100), nullable=False)
 
+
+with app.app_context():
+    db.create_all()
 
 @app.route('/', methods=['GET', 'POST'])
 def login():
